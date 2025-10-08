@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Chris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Barbería Christopher</h1>
+    </header>
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <img src="./img/barber.png" alt="s1">
+                <img src="./img/local.png" alt="s2">
+                <img src="./img/slider.png" alt="s3">
+            </div>
+        </div>
+        <section id="about">
+            <h2>Sobre Nosotros</h2>
+            <p>Bienvenidos a Barbería Christopher, donde la tradición se encuentra con el estilo moderno. Ofrecemos una experiencia de barbería única, con cortes de cabello clásicos y contemporáneos, afeitados de precisión y tratamientos de barba.</p>
+            <p>Nuestro equipo de barberos expertos está dedicado a proporcionar el mejor servicio, asegurando que cada cliente salga sintiéndose renovado y con un aspecto impecable.</p>
+        </section>
+        <section id="services">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Corte de Cabello Caballero</li>
+                <li>Afeitado Clásico</li>
+                <li>Diseño y Arreglo de Barba</li>
+                <li>Corte para Niños</li>
+                <li>Tratamientos Faciales</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contáctanos</h2>
+            <p>Estamos ubicados en [Dirección de la Barbería].</p>
+            <p>Puedes llamarnos al [Número de Teléfono] o enviarnos un correo a [Correo Electrónico].</p>
+            <p>Horario de atención: Lunes a Sábado de 9:00 AM a 8:00 PM.</p>
+        </section>
+        <div id="map">
+            <!-- Aquí puedes insertar un mapa de Google Maps con la ubicación de tu barbería -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7529.279435604139!2d-99.05598851836609!3d19.341433992320656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1759945697316!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <footer>
+        <address>
+            &copy; 2023 Barbería Christopher. Todos los derechos reservados.
+        </address>
+    </footer>
+</body>
+<script>
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+
+let index = 0;
+const tiempoPorImagen = 3000; // milisegundos (3 segundos por imagen)
+
+function cambiarSlide() {
+  index++;
+  if (index >= images.length) index = 0; // reinicia cuando llega al final
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// cambiar automáticamente
+setInterval(cambiarSlide, tiempoPorImagen);
+</script>
+
+</html>
